@@ -190,3 +190,53 @@ setLanguage(stored || browserLang);
 document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
 });
+
+// Configuração: número oficial da campanha (international format, sem sinais)
+const WA_DEFAULT_NUMBER = "5511999998888"; // substitua pelo número desejado sem '+'
+// Se quiser enviar para um contato dinâmico, o formulário permite informar telefone
+
+function sanitizePhone(raw) {
+    if (!raw) return "";
+    // Remove tudo que não seja dígito
+    return raw.replace(/\D/g, "");
+}
+
+function buildWhatsAppUrl(number, text) {
+    // number vazio => usar wa.me without number is not valid; require number. We'll use default.
+    const target = number || WA_DEFAULT_NUMBER;
+    const encoded = encodeURIComponent(text);
+    // usa wa.me (abre web.whatsapp.com ou app)
+    return `https://wa.me/${target}?text=${encoded}`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("whatsapp-form");
+    const clearBtn = document.getElementById("wa-clear");
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("wa-name").value.trim();
+        const phoneRaw = document.getElementById("wa-phone").value.trim();
+        const message = document.getElementById("wa-message").value.trim();
+
+        if (!name || !message) {
+            alert("Por favor, preencha seu nome e a mensagem.");
+            return;
+        }
+
+        const phoneSan = sanitizePhone(phoneRaw);
+        const targetNumber = phoneSan || WA_DEFAULT_NUMBER;
+
+        // montar mensagem amigável
+        const fullMessage = `Olá, meu nome é ${name}.\n\n${message}\n\n---\nEnviado pelo site Novembro Azul.`;
+        const url = buildWhatsAppUrl(targetNumber, fullMessage);
+
+        // abrir em nova aba
+        window.open(url, "_blank");
+    });
+
+    clearBtn.addEventListener("click", () => {
+        form.reset();
+    });
+});

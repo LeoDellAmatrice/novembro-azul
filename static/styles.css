@@ -126,6 +126,7 @@ body {
 }
 @media (max-width: 900px) {
     .cards { grid-template-columns: 1fr; }
+    .nav {flex-wrap: wrap;}
 }
 
 .card {

@@ -68,6 +68,34 @@
         </div>
     </section>
 
+    <section class="section" id="contato-whatsapp" aria-labelledby="titulo-contato-whatsapp">
+        <div class="container">
+            <h2 id="titulo-contato-whatsapp">Fale conosco pelo WhatsApp</h2>
+            <form id="whatsapp-form" class="card" novalidate>
+                <label>
+                    <span>Seu nome</span>
+                    <input type="text" name="name" id="wa-name" placeholder="João Silva" required />
+                </label>
+
+                <label>
+                    <span>Telefone (opcional)</span>
+                    <input type="tel" name="phone" id="wa-phone" placeholder="+5511999887766" />
+                    <small class="hint">Se vazio, será usado o número oficial da campanha.</small>
+                </label>
+
+                <label>
+                    <span>Mensagem</span>
+                    <textarea name="message" id="wa-message" rows="4" placeholder="Olá, quero saber como participar..." required></textarea>
+                </label>
+
+                <div style="display:flex;gap:12px;margin-top:12px;">
+                    <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
+                    <button type="button" id="wa-clear" class="btn btn-outline">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <section class="cta section">
         <div class="container cta-box">
             <h2>Seja parte da mudança</h2>
@@ -101,5 +129,6 @@
         <small>© 2025 Campanha Novembro Azul — Projeto educativo.</small>
     </div>
 </footer>
+<script src="static/script.js"></script>
 </body>
 </html>
