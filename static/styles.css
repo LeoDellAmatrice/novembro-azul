@@ -263,3 +263,20 @@ body {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
+
+.lang-switch {
+    margin: 0 24px 16px auto;
+    display: flex;
+    gap: 8px;
+}
+.lang-btn {
+    background: rgba(90, 183, 255, 0.15);
+    border: 1px solid rgba(90, 183, 255, 0.35);
+    color: #eaf3ff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .15s ease, background .15s ease;
+}
+.lang-btn:hover { transform: translateY(-1px); background: rgba(90, 183, 255, 0.25); }

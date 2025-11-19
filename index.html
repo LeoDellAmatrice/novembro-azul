@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Novembro Azul — Cuidar é um gesto de coragem</title>
+    <title data-i18n="meta.title">Novembro Azul — Cuidar é um gesto de coragem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -14,15 +14,22 @@
 <header class="site-header">
     <a class="brand" href="#">
         <span class="brand-icon" aria-hidden="true">👨🏻‍🦱</span>
-        <span class="brand-text">Novembro Azul</span>
+        <span class="brand-text" data-i18n="brand.name">Novembro Azul</span>
     </a>
 
     <nav class="nav">
-        <a href="#" class="nav-link active">Início</a>
-        <a href="prevencao.html" class="nav-link">Prevenção</a>
-        <a href="mitos.html" class="nav-link">Mitos & Verdades</a>
-        <a href="participe.html" class="nav-link cta">Participe</a>
+        <a href="#" class="nav-link active" data-i18n="nav.home">Início</a>
+        <a href="prevencao.html" class="nav-link" data-i18n="nav.prevencao">Prevenção</a>
+        <a href="mitos.html" class="nav-link" data-i18n="nav.mitos">Mitos & Verdades</a>
+        <a href="participe.html" class="nav-link cta" data-i18n="nav.participe">Participe</a>
     </nav>
+
+    <!-- Seletor de idioma -->
+    <div class="lang-switch">
+        <button class="lang-btn" data-lang="pt">🇧🇷 PT</button>
+        <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="es">🇪🇸 ES</button>
+    </div>
 </header>
 
 <main>
@@ -30,20 +37,18 @@
         <div class="hero-content">
             <div class="mustache" aria-hidden="true"></div>
 
-            <h1 id="titulo-hero">
-                Cuidar é um gesto de coragem
-            </h1>
-            <p class="hero-sub">
+            <h1 id="titulo-hero" data-i18n="hero.title">Cuidar é um gesto de coragem</h1>
+            <p class="hero-sub" data-i18n="hero.sub">
                 Novembro Azul é um convite à conversa, ao exame e ao cuidado. Informação salva vidas — inclusive a sua.
             </p>
 
             <div class="hero-actions">
-                <a class="btn btn-primary" href="#prevencao">Como se cuidar</a>
-                <a class="btn btn-outline" href="#mitos">Mitos & Verdades</a>
+                <a class="btn btn-primary" href="#prevencao" data-i18n="hero.btnPrev">Como se cuidar</a>
+                <a class="btn btn-outline" href="#mitos" data-i18n="hero.btnMitos">Mitos & Verdades</a>
             </div>
         </div>
 
-        <div class="hero-art" role="img" aria-label="Arte com formas em azul representando saúde e prevenção">
+        <div class="hero-art" role="img" data-i18n-attr="aria-label" aria-label="Arte com formas em azul representando saúde e prevenção">
             <div class="bubble bubble-1"></div>
             <div class="bubble bubble-2"></div>
             <div class="bubble bubble-3"></div>
@@ -53,24 +58,24 @@
 
     <section class="sobre section" aria-labelledby="titulo-sobre">
         <div class="container">
-            <h2 id="titulo-sobre">Por que Novembro Azul importa</h2>
-            <p>
+            <h2 id="titulo-sobre" data-i18n="sobre.title">Por que Novembro Azul importa</h2>
+            <p data-i18n="sobre.desc">
                 A campanha promove a conscientização sobre a saúde do homem, com foco na prevenção e diagnóstico precoce de doenças,
                 incluindo o câncer de próstata. Falar sobre isso é quebrar tabus e abrir espaço para decisões melhores.
             </p>
 
             <div class="cards">
                 <article class="card">
-                    <h3>Informar</h3>
-                    <p>Conhecimento reduz medo e aumenta as chances de agir cedo.</p>
+                    <h3 data-i18n="cards.informar.title">Informar</h3>
+                    <p data-i18n="cards.informar.desc">Conhecimento reduz medo e aumenta as chances de agir cedo.</p>
                 </article>
                 <article class="card">
-                    <h3>Prevenir</h3>
-                    <p>Hábitos saudáveis, exames regulares e atenção aos sinais fazem diferença.</p>
+                    <h3 data-i18n="cards.prevenir.title">Prevenir</h3>
+                    <p data-i18n="cards.prevenir.desc">Hábitos saudáveis, exames regulares e atenção aos sinais fazem diferença.</p>
                 </article>
                 <article class="card">
-                    <h3>Apoiar</h3>
-                    <p>Ninguém precisa cuidar sozinho. Família, amigos e profissionais ajudam.</p>
+                    <h3 data-i18n="cards.apoiar.title">Apoiar</h3>
+                    <p data-i18n="cards.apoiar.desc">Ninguém precisa cuidar sozinho. Família, amigos e profissionais ajudam.</p>
                 </article>
             </div>
         </div>
@@ -79,35 +84,35 @@
     <section class="destaques section" aria-labelledby="titulo-destaques">
         <div class="container grid-3">
             <div class="highlight">
-                <span class="num">+ cedo</span>
-                <p>Diagnóstico precoce aumenta as opções de tratamento.</p>
+                <span class="num" data-i18n="destaques.early.title">+ cedo</span>
+                <p data-i18n="destaques.early.desc">Diagnóstico precoce aumenta as opções de tratamento.</p>
             </div>
             <div class="highlight">
-                <span class="num">Check-up</span>
-                <p>Consultas regulares são parte do cuidado — marque a sua.</p>
+                <span class="num" data-i18n="destaques.checkup.title">Check-up</span>
+                <p data-i18n="destaques.checkup.desc">Consultas regulares são parte do cuidado — marque a sua.</p>
             </div>
             <div class="highlight">
-                <span class="num">Conversa</span>
-                <p>Quebrar o tabu é um passo corajoso e necessário.</p>
+                <span class="num" data-i18n="destaques.conversa.title">Conversa</span>
+                <p data-i18n="destaques.conversa.desc">Quebrar o tabu é um passo corajoso e necessário.</p>
             </div>
         </div>
     </section>
 
     <section id="prevencao" class="prevencao section" aria-labelledby="titulo-prevencao">
         <div class="container">
-            <h2 id="titulo-prevencao">Prevenção na prática</h2>
+            <h2 id="titulo-prevencao" data-i18n="prevencao.title">Prevenção na prática</h2>
             <ul class="list">
                 <li>
-                    <strong>Consulta anual:</strong>
-                    Combine exame clínico e pedidos do médico conforme necessidade.
+                    <strong data-i18n="prevencao.item1.title">Consulta anual:</strong>
+                    <span data-i18n="prevencao.item1.desc">Combine exame clínico e pedidos do médico conforme necessidade.</span>
                 </li>
                 <li>
-                    <strong>Estilo de vida:</strong>
-                    Alimentação equilibrada, atividade física e sono de qualidade.
+                    <strong data-i18n="prevencao.item2.title">Estilo de vida:</strong>
+                    <span data-i18n="prevencao.item2.desc">Alimentação equilibrada, atividade física e sono de qualidade.</span>
                 </li>
                 <li>
-                    <strong>Olho nos sinais:</strong>
-                    Mudanças urinárias, dor ou desconforto merecem atenção médica.
+                    <strong data-i18n="prevencao.item3.title">Olho nos sinais:</strong>
+                    <span data-i18n="prevencao.item3.desc">Mudanças urinárias, dor ou desconforto merecem atenção médica.</span>
                 </li>
             </ul>
         </div>
@@ -115,19 +120,19 @@
 
     <section id="mitos" class="mitos section" aria-labelledby="titulo-mitos">
         <div class="container">
-            <h2 id="titulo-mitos">Mitos & Verdades</h2>
+            <h2 id="titulo-mitos" data-i18n="mitos.title">Mitos & Verdades</h2>
             <div class="accordion">
                 <details>
-                    <summary>“Exame é sempre doloroso.”</summary>
-                    <p>Existem diferentes exames. Alguns podem causar desconforto, mas são rápidos e seguros.</p>
+                    <summary data-i18n="mitos.item1.summary">“Exame é sempre doloroso.”</summary>
+                    <p data-i18n="mitos.item1.desc">Existem diferentes exames. Alguns podem causar desconforto, mas são rápidos e seguros.</p>
                 </details>
                 <details>
-                    <summary>“Se não tenho sintomas, está tudo bem.”</summary>
-                    <p>Algumas condições são silenciosas. O check-up existe justamente para identificar cedo.</p>
+                    <summary data-i18n="mitos.item2.summary">“Se não tenho sintomas, está tudo bem.”</summary>
+                    <p data-i18n="mitos.item2.desc">Algumas condições são silenciosas. O check-up existe justamente para identificar cedo.</p>
                 </details>
                 <details>
-                    <summary>“É melhor não saber.”</summary>
-                    <p>Informação é poder. Saber cedo amplia escolhas e resultados.</p>
+                    <summary data-i18n="mitos.item3.summary">“É melhor não saber.”</summary>
+                    <p data-i18n="mitos.item3.desc">Informação é poder. Saber cedo amplia escolhas e resultados.</p>
                 </details>
             </div>
         </div>
@@ -135,9 +140,9 @@
 
     <section class="cta section" aria-labelledby="titulo-cta">
         <div class="container cta-box">
-            <h2 id="titulo-cta">Marque seu check-up neste mês</h2>
-            <p>Dar o primeiro passo muda tudo. Se preferir, leve alguém junto.</p>
-            <a class="btn btn-glow" href="participe.html">Quero agendar</a>
+            <h2 id="titulo-cta" data-i18n="cta.title">Marque seu check-up neste mês</h2>
+            <p data-i18n="cta.desc">Dar o primeiro passo muda tudo. Se preferir, leve alguém junto.</p>
+            <a class="btn btn-glow" href="participe.html" data-i18n="cta.btn">Quero agendar</a>
         </div>
     </section>
 </main>
@@ -145,25 +150,27 @@
 <footer class="site-footer">
     <div class="container footer-grid">
         <div>
-            <strong>Novembro Azul</strong>
-            <p>Conversa, prevenção e cuidado. Um movimento de todos.</p>
+            <strong data-i18n="footer.brand">Novembro Azul</strong>
+            <p data-i18n="footer.desc">Conversa, prevenção e cuidado. Um movimento de todos.</p>
         </div>
         <div>
-            <strong>Links</strong>
+            <strong data-i18n="footer.linksTitle">Links</strong>
             <ul>
-                <li><a href="prevencao.html">Prevenção</a></li>
-                <li><a href="mitos.html">Mitos & Verdades</a></li>
-                <li><a href="participe.html">Participe</a></li>
+                <li><a href="prevencao.html" data-i18n="footer.linkPrev">Prevenção</a></li>
+                <li><a href="mitos.html" data-i18n="footer.linkMitos">Mitos & Verdades</a></li>
+                <li><a href="participe.html" data-i18n="footer.linkParticipe">Participe</a></li>
             </ul>
         </div>
         <div>
-            <strong>Contato</strong>
-            <p id="contato">Procure sua unidade de saúde local ou seu médico de confiança.</p>
+            <strong data-i18n="footer.contatoTitle">Contato</strong>
+            <p id="contato" data-i18n="footer.contatoDesc">Procure sua unidade de saúde local ou seu médico de confiança.</p>
         </div>
     </div>
     <div class="copyright">
-        <small>© 2025 Campanha Novembro Azul — Projeto educativo.</small>
+        <small data-i18n="footer.copy">© 2025 Campanha Novembro Azul — Projeto educativo.</small>
     </div>
 </footer>
+
+<script src="static/script.js"></script>
 </body>
 </html>
